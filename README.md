@@ -32,6 +32,9 @@ __NOTA__: Recomendamos haber realizado todos los ejercicios de práctica para po
     - 7 --> máxima cantidad de intentos inválidos
 
 
+
+
+
 ## Bloque principal del programa
 Dentro del bloque principal del programa deberá colocar la siguiente estructura de código:
 ```python
