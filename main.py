@@ -1,4 +1,5 @@
 import csv
+from itertools import count
 import random
 import interfaz
 
@@ -51,17 +52,25 @@ def verificar_letra(letra, palabra_secreta):
 
 
 def validar_palabra(letras_usadas, palabra_secreta):
-    for letras in palabra_secreta:
-        if letras not in letras_usadas:
-            print('Aún no se adivinó la palabra completa')
-            break
+    i = 0
+
+    for letra in palabra_secreta:
+        if letra in letras_usadas:
+            i += 1
         else:
-            i = +1
+            print('Aun no ha adivinado la palabra clave')
+            break
     if i == len(palabra_secreta):
         return(True)
+
     else:
         return(False)
-            
+
+    
+
+
+
+    
     
 
 
@@ -81,7 +90,7 @@ if __name__ == "__main__":
 
     # Leer la palabra secreta de un archivo csv.
     palabra_secreta = leer_palabra_secreta('palabras.csv')
-    print(palabra_secreta)
+    #print(palabra_secreta)
 
     
     # Esto se realiza para que el jugador pueda ver al principio
